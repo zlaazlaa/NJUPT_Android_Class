@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2155" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2155" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/textview_style.xml" value="0.255" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout-land/activity.xml" value="0.1" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout-land/activity_counter_homework.xml" value="0.21031746031746032" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout-land/activity_first.xml" value="0.21031746031746032" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout-land/activity_main.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout-land/activity_main2.xml" value="0.21119929453262787" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_counter_homework.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_first.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_scrolling_text.xml" value="0.1" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_second.xml" value="0.264" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_select_item.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_shopping.xml" value="0.176" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_show_hello_toast.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_show_some_text.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/zlaa/AndroidStudioProjects/MyApplication/app/src/main/res/layout/item_card.xml" value="0.2989583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
