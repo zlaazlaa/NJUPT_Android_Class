@@ -11,18 +11,13 @@ class SelectItem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_item)
-//        val nowNumber = intent.getStringExtra("message")?.toInt()
         initItem()
         val layoutManager = LinearLayoutManager(this)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        val adapter = ItemAdapter(itemList, this)
+        val no = intent.getIntExtra("No", 0)
+        val adapter = ItemAdapter(itemList, this, no)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
-    }
-
-    fun finishActivity(txt: String, id: String) {
-
-
     }
 
     private fun initItem() {

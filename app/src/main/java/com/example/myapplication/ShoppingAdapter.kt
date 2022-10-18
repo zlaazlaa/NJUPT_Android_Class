@@ -1,23 +1,24 @@
 package com.example.myapplication
 
-import android.app.Activity
-import android.content.Context
+import android.R.drawable
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 
-class ItemAdapter(
-    private val itemList: List<Item>,
-    private val selectItem: SelectItem,
-    private val No: Int
+
+class ShoppingAdapter(
+    private var itemList: ArrayList<Item>,
+    private val shopping: Shopping
 ) :
-    RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
+    RecyclerView.Adapter<ShoppingAdapter.ViewHolder>() {
+
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemImage: ImageView = view.findViewById(R.id.item_image)
         val itemName: TextView = view.findViewById(R.id.item_name)
@@ -29,26 +30,36 @@ class ItemAdapter(
         return ViewHolder(view)
     }
 
+    @SuppressLint("ResourceType", "UseCompatLoadingForDrawables")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
-        holder.itemImage.setImageResource(item.imageId)
+        Log.e("ID", "${item.imageId}")
+        val idTemp = item.imageId - 1
+        val idName = "a" +
+                if (idTemp != -1) (idTemp % 13 + 1).toString() else "0"
+
+        val id: Int =
+            shopping.resources.getIdentifier(idName, "drawable", "com.example.myapplication")
+        holder.itemImage.setImageResource(id)
         holder.itemName.text = item.name
-        holder.itemBtn.text = "选择这个商品"
+        holder.itemBtn.text = "去选择商品"
         holder.itemBtn.setOnClickListener {
-            val id = position
-            val item2 = itemList[id]
-            val txt = item2.name
-            val intent = Intent().apply {
-                putExtra("message", txt)
-                putExtra("id", position + 1)
-                putExtra("No", No)
-            }
-            selectItem.setResult(Activity.RESULT_OK, intent)
-            selectItem.finish()
+            val intent = Intent(shopping, SelectItem::class.java)
+            intent.putExtra("No", position)
+            shopping.myActivityLauncher.launch(intent)
         }
     }
 
     override fun getItemCount(): Int {
         return itemList.size
     }
+
+    fun freshItem(txt: String, id: Int, position: Int) {
+        Log.e("OK", "ko")
+        itemList[position] = Item(txt, id)
+        Log.e("KK", "ss")
+        this.notifyItemChanged(position)
+    }
+
+
 }
