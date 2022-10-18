@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,10 +20,24 @@
             android:exported="true" />
         <activity
             android:name=".SelectItem"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.action.webview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.action.webviewcategory" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Shopping"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.action.webview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.action.webviewcategory" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ShowHelloToast"
             android:exported="true" />

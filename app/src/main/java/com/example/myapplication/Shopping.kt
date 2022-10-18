@@ -3,14 +3,17 @@ package com.example.myapplication
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.EditText
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 
 class Shopping : AppCompatActivity() {
     private val itemList = ArrayList<Item>()
@@ -30,6 +33,16 @@ class Shopping : AppCompatActivity() {
                     itemList.add(Item(name, id))
                 }
             }
+        }
+        findViewById<MaterialButton>(R.id.btn).setOnClickListener {
+            val txt = findViewById<EditText>(R.id.edit_text).text.toString()
+            val uri = Uri.parse(txt)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            intent.setClassName(
+                "com.android.chrome",
+                "com.google.android.apps.chrome.Main"
+            )
+            startActivity(intent)
         }
         val layoutManager = LinearLayoutManager(this)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view_shopping)

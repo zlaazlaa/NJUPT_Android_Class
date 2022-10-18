@@ -1,9 +1,14 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
+
 
 class SelectItem : AppCompatActivity() {
 
@@ -18,6 +23,16 @@ class SelectItem : AppCompatActivity() {
         val adapter = ItemAdapter(itemList, this, no)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
+        findViewById<MaterialButton>(R.id.btn).setOnClickListener {
+            val txt = findViewById<EditText>(R.id.edit_text).text.toString()
+            val uri = Uri.parse(txt)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            intent.setClassName(
+                "com.android.chrome",
+                "com.google.android.apps.chrome.Main"
+            )
+            startActivity(intent)
+        }
     }
 
     private fun initItem() {
