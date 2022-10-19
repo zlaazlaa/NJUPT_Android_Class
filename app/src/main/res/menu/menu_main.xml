@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemOrder"
+        android:icon="@drawable/call"
+        app:showAsAction="always"
+        android:title="@string/order" />
+
+    <item
+        android:id="@+id/itemCancel"
+        android:icon="@drawable/arrow"
+        app:showAsAction="always"
+        android:title="@string/cancel" />
+
+    <item
+        android:id="@+id/itemLike"
+        android:icon="@drawable/autonew"
+        android:title="@string/like" />
+    <item
+        android:id="@+id/itemOrder2"
+        android:icon="@drawable/autonew"
+        android:title="@string/order" />
+</menu>

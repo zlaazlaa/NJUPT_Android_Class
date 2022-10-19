@@ -2,14 +2,17 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.CheckBox
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.myapplication.databinding.ActivityDroidCafeBinding
+import com.google.android.material.snackbar.Snackbar
+
 
 class DroidCafe : AppCompatActivity() {
 
@@ -21,6 +24,7 @@ class DroidCafe : AppCompatActivity() {
 
         binding = ActivityDroidCafeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         setSupportActionBar(binding.toolbar)
 
@@ -48,4 +52,5 @@ class DroidCafe : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
 }

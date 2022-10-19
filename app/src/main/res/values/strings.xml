@@ -80,5 +80,8 @@ how they did it much more slowly, with an R&amp;B feel to it.
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="order">Order</string>
+    <string name="cancel">Cancel</string>
+    <string name="like">Like</string>
 
 </resources>
