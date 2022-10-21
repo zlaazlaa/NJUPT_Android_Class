@@ -83,5 +83,7 @@ how they did it much more slowly, with an R&amp;B feel to it.
     <string name="order">Order</string>
     <string name="cancel">Cancel</string>
     <string name="like">Like</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
