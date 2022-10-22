@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GridThirdFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="225dp"
+            android:src="@drawable/mg"
+            android:transitionName="partOrderOpen_mg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/mg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            android:layout_gravity="top"
+            android:src="@drawable/xyc"
+            android:transitionName="partOrderOpen_xyc" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/knx"
+            android:transitionName="partOrderOpen_knx" />
+
+    </LinearLayout>
+
+</FrameLayout>

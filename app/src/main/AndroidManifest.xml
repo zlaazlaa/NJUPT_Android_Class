@@ -16,6 +16,20 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".RecyclerViewTest"
+            android:exported="false" />
+        <activity
+            android:name=".GridToOpen"
+            android:exported="true" />
+        <activity
+            android:name=".Grid"
+            android:exported="true" />
+        <activity
+            android:name=".TabActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
             android:name=".ShowDate"
             android:exported="true" />
         <activity
