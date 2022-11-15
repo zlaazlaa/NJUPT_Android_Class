@@ -4,6 +4,8 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +18,53 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".StopAlarm"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TimeAlarm"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.broad.intent" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".AlarmReceiver2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.stop.intent" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".AlarmReceiver3"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.show.intent" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Alarm"
+            android:exported="true" />
+        <activity
+            android:name=".NotifyMe"
+            android:exported="true" />
+        <activity
             android:name=".RecyclerViewTest"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".GridToOpen"
             android:exported="true" />

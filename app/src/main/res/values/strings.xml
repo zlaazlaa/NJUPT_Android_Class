@@ -92,5 +92,7 @@ how they did it much more slowly, with an R&amp;B feel to it.
     <string name="cnx">薰衣草花语：等待爱情、安静、坚贞、浪漫的爱 薰衣草就是“香”的代表，有“花之精灵”之称。薰衣草的花语是等待爱情，薰衣草能之所以能受到时尚族群的青睐，是因为薰衣草还有许多浪漫美好的寓意。</string>
     <string name="mg">玫瑰花语：爱情、爱与美、容光焕发 在古希腊神话中，玫瑰集爱与美于一身，既是美神的化身，又溶进了爱神的血液。</string>
     <string name="back">Back</string>
+    <string name="fresh">fresh</string>
+    <string name="inputWordToAdd">输入要添加的单词</string>
 
 </resources>
